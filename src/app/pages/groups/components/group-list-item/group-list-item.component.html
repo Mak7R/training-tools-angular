@@ -1,0 +1,14 @@
+
+<td>
+  <div *ngIf="isAdmin else isNotAdmin">
+    <a type="button" class="link-dark" data-bs-toggle="modal" data-bs-target="#edtGroupModal-@group.Id"><span class="fs-5">{{ group.name }}</span></a>
+  </div>
+  <ng-template #isNotAdmin>
+    <span class="fs-5">{{ group.name }}</span>
+  </ng-template>
+</td>
+<td *ngIf="isAdmin">
+  <div type="button" class="btn btn-danger ms-auto" data-bs-toggle="modal" data-bs-target="#deleteGroup-@group.Id-Modal">
+    Remove
+  </div>
+</td>

@@ -1,0 +1,11 @@
+main {
+    min-height: 94vh; 
+    width: 100%;
+    background-color: #f4f0fa;
+}
+
+#lang-list-selctor {
+    max-width: 4em; 
+    min-width: 4em; 
+    width: 4em;
+}

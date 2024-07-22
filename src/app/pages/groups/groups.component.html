@@ -1,0 +1,23 @@
+<div class="container">
+  <h2 class="text-center mb-2">Groups</h2>
+
+  <table class="table table-striped table-hover">
+    <thead>
+    <tr>
+      <th class="col-3 fs-5">
+        Group name
+      </th>
+      <th *ngIf="isAdmin" class="col-1 fs-5">
+        Actions
+      </th>
+    </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let group of groups">
+        <app-group-list-item class="list-group-item" [group]="group"></app-group-list-item>
+        <app-update-group-modal *ngIf="isAdmin"/>
+        <app-remove-group-modal *ngIf="isAdmin"/>
+      </tr>
+    </tbody>
+  </table>
+</div>

@@ -1,0 +1,25 @@
+<div class="modal fade" id="edtGroupModal-@group.Id" tabindex="-1" aria-labelledby="edtGroupModal-@group.Id-Label" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="edtGroupModal-@group.Id-Label">Edit GroupModel: group.Name</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form method="post" asp-action="Update" asp-controller="Groups" id="edit-group-form-@group.Id">
+          <div class="mb-3">
+            <input name="id" value="@group.Id" hidden/>
+
+            <label for="edit-group-name-@group.Id-input" class="col-form-label">Name</label>
+            <input id="edit-group-name-@group.Id-input" type="text" name="name" value="@group.Name" class="form-control">
+            <span id="edit-group-name-@group.Id-errors" class="text-danger"></span>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-success" onclick="submitEditForm('@group.Id')">Save</button>
+      </div>
+    </div>
+  </div>
+</div>
