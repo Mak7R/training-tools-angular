@@ -59,10 +59,14 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "training-tools-angular:build:production"
+              "buildTarget": "training-tools-angular:build:production",
+              "host": "0.0.0.0",
+              "port": 8030
             },
             "development": {
-              "buildTarget": "training-tools-angular:build:development"
+              "buildTarget": "training-tools-angular:build:development",
+              "host": "localhost",
+              "port": 8030
             }
           },
           "defaultConfiguration": "development"
