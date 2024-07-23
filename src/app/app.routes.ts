@@ -8,10 +8,12 @@ import {ExercisesComponent} from "./pages/exercises/exercises.component";
 import {HelpComponent} from "./pages/help/help.component";
 import {PrivacyComponent} from "./pages/privacy/privacy.component";
 import {ProfileComponent} from "./pages/profile/profile.component";
+import {TrainingPlansComponent} from "./pages/training-plans/training-plans.component";
+import {UsersComponent} from "./pages/users/users.component";
 
 
 export const routes: Routes = [
-  { path: '', redirectTo: '/home', pathMatch: 'full' },
+  { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent },
 
   { path: 'login', component: LoginComponent },
@@ -20,11 +22,13 @@ export const routes: Routes = [
 
   { path: 'groups', component: GroupsComponent },
   { path: 'exercises', component: ExercisesComponent},
+  { path: 'training-plans', component: TrainingPlansComponent},
+  { path: 'users', component: UsersComponent},
 
   { path: 'help', component: HelpComponent },
   { path: 'privacy', component: PrivacyComponent },
 
-  { path: '**', redirectTo: '/home' }
+  { path: '**', redirectTo: 'home' }
 ];
 
 @NgModule({

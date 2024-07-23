@@ -1,6 +1,5 @@
 import {Component, Inject} from '@angular/core';
 import {RouterLink, RouterOutlet} from "@angular/router";
-import {UserModel} from "./models/user.model";
 import {NgIf} from "@angular/common";
 import {IAuthService} from "./interfaces/auth.service.interface";
 

@@ -15,7 +15,7 @@
               <li class="nav-item">
                   <a class="nav-link" routerLink="/exercises">Exercises</a>
               </li>
-              <li class="nav-item">
+              <li *ngIf="authService.getIdentity().getIsLoggedIn()" class="nav-item">
                   <a class="nav-link" asp-controller="TrainingPlans" asp-action="GetAll">Training Plans</a>
               </li>
               <li *ngIf="authService.getIdentity().getIsLoggedIn()" class="nav-item">
